@@ -10,7 +10,7 @@ categories: android
 
 <!-- more -->
 
-本文的思路借鉴了http://blog.csdn.net/actual_/article/details/8582313这位博主的代码，但他的代码有个Bug，即当拖动控件到屏幕中间位置时控件会变形，分析其代码，主要问题出现在：
+本文的思路借鉴了[http://blog.csdn.net/actual_/article/details/8582313](http://blog.csdn.net/actual_/article/details/8582313)这位博主的代码，但他的代码有个Bug，即当拖动控件到屏幕中间位置时控件会变形，分析其代码，主要问题出现在：
 
 ```java
 case MotionEvent.ACTION_MOVE:  
