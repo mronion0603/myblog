@@ -39,4 +39,13 @@ bundle install
 bundle exec jekyll server
 ```
 
+图片插入方式：  
+```sh
+![](/projectname/image path/xxx.jpg)  
+```
+例如:
+```sh
+![](/myblog/assets/img/jekyll1.jpg)
+```
+
 更多细节可以参考：[Setting up your GitHub Pages site locally with Jekyll](https://help.github.com/articles/setting-up-your-github-pages-site-locally-with-jekyll/)
