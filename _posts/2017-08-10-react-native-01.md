@@ -53,7 +53,7 @@ github有一个开源的插件：[ReactNative-LiveTemplate](https://github.com/v
 
 ![](http://upload-images.jianshu.io/upload_images/7285940-6beb5752d6f3dcb2.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-# 4.运行配置
+## 4.运行配置
 在最上面找到Run菜单选择当中的```Edit Configurations...```  
 
 ![](http://upload-images.jianshu.io/upload_images/7285940-576e939fce12218a.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
