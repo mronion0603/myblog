@@ -2,9 +2,8 @@
 layout: post
 title: react native学习笔记1——webstorm安装与配置
 tags:
-- 性能优化
-- android
-categories: android
+- react-native
+categories: react-native
 ---
 
 工欲善其事必先利其器，选择一个趁手的IDE，码起来代码来是事半功倍。

@@ -2,9 +2,8 @@
 layout: post
 title: react native学习笔记0——windows环境搭建
 tags:
-- 性能优化
-- android
-categories: android
+- react-native
+categories: react-native
 ---
 
 本文基本步骤是参考RN中文官网结合自己实际搭建体验而来，由于Chocolatey被墙，所以python2和nodejs直接分别在对应的官方网站下载安装的。
