@@ -1,6 +1,6 @@
 ---
 layout: post
-title: android-如何在jni中C/C++层打印log到logcat
+title: android 如何在jni中C/C++层打印log到logcat
 tags:
 - android
 - jni
