@@ -34,9 +34,9 @@
     
     function toc_number() {
         var num = "";
-        for (i = 0; i < this.top; i++) {
-            num += this.dataStore[i] + ".";
-        }
+        // for (i = 0; i < this.top; i++) {
+        //     num += this.dataStore[i] + ".";
+        // }
         return num;
     }
     
