@@ -7,6 +7,7 @@ categories: react-native
 ---
 
 本文是我整理的各个常用组件的基本使用方法，主要简要几个常见的基本组件，作为入门材料使初学者对RN中的常用组件有个直观的了解，快速入门，加强学习的成就感，增强学习RN的动力，不会面面俱到的详细讲解组件中的各个属性的含义及用法，如需深入了解可以查看[官网文档](http://reactnative.cn/)。
+
 ## Demo代码的使用
 相关的Demo代码可以在[https://github.com/mronion0603/ReactNativeExercise](https://github.com/mronion0603/ReactNativeExercise)下载，或者直接复制到你的工程里使用即可。
  Demo的示例代码结构
