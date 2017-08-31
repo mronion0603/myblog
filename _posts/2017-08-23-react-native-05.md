@@ -125,7 +125,7 @@ const styles = {
 
 ![](http://upload-images.jianshu.io/upload_images/7285940-e2a7c626ba1b84d0.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-## 底部导航栏
+### 底部导航栏
 底部导航栏有四个图片等分底部，其实这里我们有两个思路：一个是用前面介绍的等分网格，为这四个子元素设置```flex:1```；另一种方法是给父元素设置```justifyContent:'space-around'```。这里采用第二种方法。
 在前面的``` <View style={styles.foot}><View>```中加入四张图片：
 ```javascript
@@ -153,7 +153,7 @@ footimage: {
 
 ![](http://upload-images.jianshu.io/upload_images/7285940-fed8d14dc9d0f990.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-## 主体内容ScrollView
+### 主体内容ScrollView
 主体内容可以分为三个模块，上：广告栏区，中：分类按钮区，下：推荐漫画区。在```<ScrollView></ScrollView>```中加入这三个模块
 ```javascript
 <ScrollView>
