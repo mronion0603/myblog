@@ -12,7 +12,7 @@ categories: react-native
 
 fetch的基本格式为：
 
-```
+```javascript
 fetch(url, fetchOptions) //发起网络请求
     .then((response) => {   
     // 数据解析方式
@@ -41,7 +41,7 @@ fetch('https://mywebsite.com/endpoint/', {
   headers: {
     'Content-Type': 'application/x-www-form-urlencoded',
   },
-  body: 'key1=value1&key2=value2'
+  body:'key1=value1&key2=value2',
 })
 ```
 
@@ -56,20 +56,23 @@ fetchOptions是一个对象，它包含了如下可选参数的设置:
 1. ***headers***请求头遵循http协议规范，通常设置Accept、Content-Type属性。
 Accept：希望接受的数据类型
 Content-Type：发送的实体数据的数据类型
-```
+```javascript
 headers: {
 'Accept': 'application/json',  //希望接受的数据类型为json
 'Content-Type': 'application/json',  //发送的实体数据的数据类型为json
 }
 ```
-2. ***body***的传入参数有两种方式：
-方式一:
-```
+2. ***body***的传入参数有三种方式：
+方式一: 不推荐，可能在某些服务器无法识别。
+```javascript
 JSON.stringify({key1:value1,key2:value2,...})
 ```
-不推荐。可能在某些服务器无法识别。
-方式二:
+方式二: 传统的form格式
+```javascript
+'key1=value1&key2=value2'
 ```
+方式三: 使用FormData
+```javascript
     let formData = new FormData();
     formData.append("key1", "value1");
     formData.append("key2", "value2");
@@ -80,7 +83,7 @@ JSON.stringify({key1:value1,key2:value2,...})
 * no-cors：默认mode。该模式允许发送本次跨域请求，但是不能访问响应返回的内容，即可以请求其他域的脚本、图片和其他资源，但是不能访问response里面的属性。
 
 如下是一个采用post方式的网络请求：
-```
+```javascript
 let formData = new FormData();
      formData.append("key1", "value1");
      formData.append("key2", "value2");
@@ -94,7 +97,7 @@ fetch(url, {
 ```
 ### 处理服务器的响应数据
 前面介绍了发起请求，接下来介绍处理服务器的响应数据。fetch由于采用了promise的异步处理方式，因此在写网络请求这种异步操作特别简洁顺滑。
-```
+```javascript
 fetch('https://facebook.github.io/react-native/movies.json')   //发起网络请求
       .then((response) => response.json())    // 数据解析方式
       .then((responseJson) => {  // 获取到的数据处理
@@ -152,7 +155,7 @@ const Styles = StyleSheet.create({
 ```
 #### 2.获取网络数据
 下面将通过豆瓣提供的api获取网络上一个真实的书本信息。在上一节[组件的生命周期](http://blog.csdn.net/teagreen_red/article/details/77871635)中介绍过，组件初始化阶段由```constructor```开始，我们先初始化书本信息。
-```
+```javascript
 constructor(props) {
         super(props);
         this.state = {
@@ -161,7 +164,7 @@ constructor(props) {
     }
 ```
 组件在渲染```render```完成后会主动回调```componentDidMount```函数，```componentDidMount```方法只会在组件完成加载的时候调用一次。我们在```componentDidMount```中执行获取网络数据的方法```fetchBookinfoList```，修改组件状态：
-```
+```javascript
 fetchBookinfoList() {
         const url = 'https://api.douban.com/v2/book/isbn/9787302315582';
         fetch(url)
@@ -184,7 +187,7 @@ fetchBookinfoList() {
 ```
 #### 3.将获取到的网络数据显示在界面上
 修改```render()```方法，当```this.state.bookinfo```数据不为空时显示书本信息，否则显示一个正在加载的视图。
-```
+```javascript
 render() {
         let item = this.state.bookinfo;
         if (item) {
@@ -396,4 +399,4 @@ const styles = StyleSheet.create({
 });
 ```
 
-本文的示例代码在: [https://github.com/mronion0603/ReactNativeExercise/tree/master/src/04_network](https://github.com/mronion0603/ReactNativeExercise/tree/master/src/04_network)
+本文的所有源码在[这里](https://github.com/mronion0603/ReactNativeExercise/tree/master/src/04_network)
